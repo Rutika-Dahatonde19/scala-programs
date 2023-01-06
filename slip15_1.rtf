@@ -1,0 +1,49 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh17440\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 import scala.io.StdIn._\
+class savingAccount(val ano:Int,val name:String,val bal:Int,val minbal:Int)\
+\{\
+var accno:Int=ano\
+var n:String=name\
+var balance:Int=bal\
+var mb:Int=minbal\
+def withdrawl()\
+\{\
+println("Enter the withdrawl ammount:")\
+var amt=readInt()\
+if(amt<balance && mb<balance)\
+\{\
+balance=balance-amt\
+\}\
+else\
+\{\
+println("Insufficient funds")\
+\}\
+\}\
+def deposite()\
+\{\
+println("Enter the deposite amount")\
+var amt=readInt()\
+balance=balance+amt\
+\}\
+def viewbalance()\
+\{\
+println("Your balance is"+balance)\
+\}\
+\}\
+object amount\
+\{\
+def main(args:Array[String])\
+\{\
+var obj=new savingAccount(123,"sham",1200,500)\
+obj.withdrawl()\
+obj.viewbalance()\
+obj.deposite()\
+obj.viewbalance()\
+\}\
+\}}
